@@ -132,8 +132,8 @@ ul {
 .lt_main {
     padding-left: 180px;
     padding-top: 50px;
-    background-color: pink;
     height: 100%;
+    width: 100%;
     transition: all 1s;
 }
 
@@ -141,4 +141,13 @@ ul {
     padding-left: 0;
 }
 
+.breadcrumb {
+    margin-top: 20px;
+}
+
+.l_echarts,
+.r_echarts {
+    width: 48%;
+    height: 400px;
+}
 
