@@ -17,7 +17,7 @@ $(function () {
                 var htmlStr = template('userTpl', info);
                 $('#user_table').html(htmlStr);
 
-                // 初始化分页组件
+                // 每次查询结束后, 重新初始化分页组件
                 $("#pagintor").bootstrapPaginator({
                     bootstrapMajorVersion: 3,//默认是2，如果是bootstrap3版本，这个参数必填
                     currentPage: info.page,//当前页
