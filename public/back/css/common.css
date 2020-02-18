@@ -151,3 +151,9 @@ ul {
     height: 400px;
 }
 
+/* 表格内容水平垂直居中 */
+.table.table-bordered th,
+.table.table-bordered td {
+    vertical-align: middle;
+    text-align: center;
+}
