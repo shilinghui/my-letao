@@ -55,6 +55,8 @@ $(function () {
     $('.dropdown-menu').on('click', 'a', function () {
         $('#cate_text').text($(this).text()); // 修改按钮展示的文本
         $('[name="categoryId"]').val($(this).data('id'));
+        // 更新校验状态
+        $("#form").data('bootstrapValidator').updateStatus('categoryId', 'VALID')
     })
 
     // 点击上传图片按钮  (处理方式1)
@@ -71,6 +73,8 @@ $(function () {
             var imgAddress = data.result.picAddr
             $('#upload_img').attr('src', imgAddress)
             $('[name="brandLogo"]').val(imgAddress)
+            // 更新图片的校验状态
+            $("#form").data('bootstrapValidator').updateStatus('brandLogo', 'VALID')
         }
     });
 
