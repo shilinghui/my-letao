@@ -222,17 +222,8 @@ $(function () {
     function reset() {
         $("#form").data('bootstrapValidator').resetForm(true)
         $('#brand_text').text('请选择二级分类')
-        console.log($('#product_imgs img'))
         $('#product_imgs img').remove()
         picArr = []
-
-        var paramStr = $('#form').serialize()
-        // brandId=11&proName=12&proDesc=12&num=12&size=12-12&oldPrice=12&price=321&picStatus=
-        // 拼接图片参数
-        picArr.forEach(function (v, i) {
-            paramStr += '&picName' + (i + 1) + '=' + v.picName + '' + '&picAddr' + (i + 1) + '=' + v.picAddr
-        })
-        console.log(paramStr)
     }
 
     // 8. 关闭添加产品模态框后调用
