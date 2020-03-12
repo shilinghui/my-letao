@@ -20,11 +20,16 @@ $(function () {
 
     // 删除单条记录
     $('.search_list').on('click', '.del_btn', function () {
-        var index = $(this).data('index')
-        var searchArr = getSearchArr()
-        searchArr.splice(index, 1)
-        setSearchArr(searchArr)
-        renderSearchList()
+        mui.confirm('你确定要删除该条记录嘛', '温馨提示', ['取消', '确认'], function (res) {
+            if (res.index === 1) {
+                // 确认
+                var index = $(this).data('index')
+                var searchArr = getSearchArr()
+                searchArr.splice(index, 1)
+                setSearchArr(searchArr)
+                renderSearchList()
+            }
+        })
     })
 
     // 搜索按钮
@@ -40,9 +45,9 @@ $(function () {
         var index = searchArr.indexOf(searchContent)
         if (index > -1) {
             // 将输入的内容提到第一个
-            var temp = searchArr[0]
-            searchArr[0] = searchArr[index]
-            searchArr[index] = temp
+            var temp = searchArr[index]
+            searchArr.splice(index, 1)
+            searchArr.unshift(temp)
         }
         else {
             // 不重复

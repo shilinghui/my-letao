@@ -10,6 +10,9 @@ html, body {
 img {
     display: block;
 }
+.red {
+    color: red;
+}
 .lt_container {
     max-width: 640px;
     min-width: 320px;
@@ -94,4 +97,24 @@ img {
     height: 100%;
     position: relative;
     background-color: #fff;
+}
+
+
+.lt_main .lt_search {
+    padding: 10px;
+    position: relative;
+}
+.lt_main .lt_search input {
+    height: 34px;
+    width: 100%;
+    border: 1px solid #007AFF;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.lt_main .lt_search .search_btn {
+    position: absolute;
+    right:10px;
+    border-radius: 0 5px 5px 0;
+
 }
