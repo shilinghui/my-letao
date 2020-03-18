@@ -25,8 +25,16 @@ $(function () {
                     return
                 }
                 if (info.success) {
-                    var idx = location.href.indexOf('=')
-                    location.href = location.href.slice(idx + 1)
+                    if (location.href.indexOf('retUrl') > -1) {
+                        // 需要跳转到原来的页面
+                        var idx = location.href.indexOf('=')
+                        location.href = location.href.slice(idx + 1)
+
+                    }
+                    else {
+                        // 跳转到用户中心
+                        location.href = './user.html'
+                    }
                 }
             }
         })
